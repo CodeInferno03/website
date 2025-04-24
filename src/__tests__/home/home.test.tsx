@@ -1,5 +1,4 @@
 import {
-  // beforeAll,
   it
 } from 'vitest'
 import App from '../../App'
