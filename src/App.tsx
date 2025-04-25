@@ -13,4 +13,6 @@ function App() {
   )
 }
 
+// SAMPLE COMMENT
+
 export default App
