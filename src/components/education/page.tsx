@@ -1,11 +1,12 @@
 import * as React from 'react'
 import Box from '@mui/material/Box'
 import { WebsiteContext } from '../../utils/context'
-import AboutButton from '../home/about'
+import ProjectButton from '../home/projects'
 import HomeButton from '../about/home'
-import EducationButton from '../home/education'
+import AboutButton from '../home/about'
 
-function ProjectsPage() {
+
+function EducationPage() {
   const {
     websiteTextColor
   } = React.useContext(WebsiteContext)!
@@ -18,13 +19,13 @@ function ProjectsPage() {
           color: websiteTextColor
         }}
       >
-        My projects
+        My education
       </Box>
       <HomeButton />
       <AboutButton />
-      <EducationButton />
+      <ProjectButton />
     </React.Fragment>
   )
 }
 
-export default ProjectsPage
+export default EducationPage

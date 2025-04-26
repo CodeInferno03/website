@@ -52,8 +52,8 @@ it('\'projects\' button visible on about page', async () => {
       </MemoryRouter>
     </WebsiteContextProvider>
   )
-  const aboutButton = await screen.findByText('projects')
-  expect(aboutButton).toBeVisible()
+  const projectsButton = await screen.findByText('projects')
+  expect(projectsButton).toBeVisible()
 })
 
 it('\'home\' button visible on about page', async () => {
@@ -66,6 +66,20 @@ it('\'home\' button visible on about page', async () => {
       </MemoryRouter>
     </WebsiteContextProvider>
   )
-  const aboutButton = await screen.findByText('home')
-  expect(aboutButton).toBeVisible()
+  const homeButton = await screen.findByText('home')
+  expect(homeButton).toBeVisible()
+})
+
+it('\'education\' button visible on about page', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/about']}>
+        <Routes>
+          <Route path='/about' element={<AboutPage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const educationButton = await screen.findByText('education')
+  expect(educationButton).toBeVisible()
 })

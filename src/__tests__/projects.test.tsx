@@ -67,6 +67,20 @@ it('\'home\' button visible on projects page', async () => {
       </MemoryRouter>
     </WebsiteContextProvider>
   )
-  const aboutButton = await screen.findByText('home')
-  expect(aboutButton).toBeVisible()
+  const homeButton = await screen.findByText('home')
+  expect(homeButton).toBeVisible()
+})
+
+it('\'home\' button visible on projects page', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/projects']}>
+        <Routes>
+          <Route path='/projects' element={<ProjectsPage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const educationButton = await screen.findByText('education')
+  expect(educationButton).toBeVisible()
 })
