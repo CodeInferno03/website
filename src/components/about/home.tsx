@@ -7,7 +7,7 @@ import { WebsiteContext } from '../../utils/context';
 function HomeButton() {
   const navigate = useNavigate()
   const goToAboutPage = () => {
-    navigate('/home')
+    navigate('/')
   }
   const {
     websiteTextColor
