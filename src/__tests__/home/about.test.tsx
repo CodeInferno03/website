@@ -5,24 +5,25 @@ import {
 import App from '../../App'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import HomePage from '../../components/home/page'
+// import HomePage from '../../components/home/page'
 import WebsiteContextProvider from '../../utils/contextProvider'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
+import AboutPage from '../../components/about/page'
 
 it('Renders', async () => {
   render(<App />)
 })
 
-it('Name text is present', async () => {
+it('\'about\' page renders text', async () => {
   render(
     <WebsiteContextProvider>
-      <MemoryRouter initialEntries={['/']}>
+      <MemoryRouter initialEntries={['/about']}>
         <Routes>
-          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
         </Routes>
       </MemoryRouter>
     </WebsiteContextProvider>
   )
-  const textElement = await screen.findByText('Hi, I\'m Ishaan')
+  const textElement = await screen.findByText('About me')
   expect(textElement).toBeVisible()
 })

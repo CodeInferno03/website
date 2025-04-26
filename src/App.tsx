@@ -1,18 +1,23 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-import React from 'react'
-import HomePage from './components/homepage/homepage'
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from 'react-router-dom';
+import HomePage from './components/home/page'
+import WebsiteContextProvider from './utils/contextProvider';
+import AboutPage from './components/about/page';
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
-    <React.Fragment>
-      <HomePage />
-    </React.Fragment>
+    <WebsiteContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
+        </Routes>
+      </BrowserRouter>
+    </WebsiteContextProvider>
   )
 }
 
