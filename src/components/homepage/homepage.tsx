@@ -1,11 +1,19 @@
-// import * as React from 'react'
+import * as React from 'react'
 import Box from '@mui/material/Box'
+import AboutButton from './aboutButton'
 
 function HomePage() {
   return (
-    <Box component="section" sx={{ p: 2, border: '1px dashed grey' }}>
-      Hi, I'm Ishaan
-    </Box>
+    <React.Fragment>
+      <Box
+        component='div'
+      >
+        Hi, I'm Ishaan
+      </Box>
+      <Box>
+        <AboutButton />
+      </Box>
+    </React.Fragment>
   )
 }
 

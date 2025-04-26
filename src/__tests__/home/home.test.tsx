@@ -16,3 +16,9 @@ it('Name text is present', async () => {
   const textElement = await screen.findByText('Hi, I\'m Ishaan')
   expect(textElement).toBeVisible()
 })
+
+// it('\'About button is shown\'', async () => {
+//   render(<HomePage />)
+//   const aboutButton = await screen.findByText('about')
+//   expect(aboutButton).toBeVisible()
+// })
