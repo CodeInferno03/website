@@ -11,20 +11,6 @@ import WebsiteContextProvider from '../../utils/contextProvider'
 import userEvent from '@testing-library/user-event'
 // import AboutPage from '../../components/about/page'
 
-it('\'about\' button is shown', async () => {
-  render(
-    <WebsiteContextProvider>
-      <MemoryRouter initialEntries={['/']}>
-        <Routes>
-          <Route path='/' element={<AboutButton />} />
-        </Routes>
-      </MemoryRouter>
-    </WebsiteContextProvider>
-  )
-  const aboutButton = await screen.findByText('about')
-  expect(aboutButton).toBeVisible()
-})
-
 it('\'about\' button navigates to \'about\' page', async () => {
   render(
       <MemoryRouter initialEntries={['/']}>

@@ -26,3 +26,32 @@ it('Name text is present', async () => {
   const textElement = await screen.findByText('Hi, I\'m Ishaan')
   expect(textElement).toBeVisible()
 })
+
+it('\'about\' button visible on home screen', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/']}>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const aboutButton = await screen.findByText('about')
+  expect(aboutButton).toBeVisible()
+})
+
+it('\'projects\' button visible on home screen', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/']}>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const aboutButton = await screen.findByText('projects')
+  expect(aboutButton).toBeVisible()
+})
+

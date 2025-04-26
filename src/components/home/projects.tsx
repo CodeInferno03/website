@@ -1,0 +1,32 @@
+import * as React from 'react';
+import Button from '@mui/material/Button'
+import Box from '@mui/material/Box';
+// import { useNavigate } from 'react-router-dom';
+import { WebsiteContext } from '../../utils/context';
+
+function ProjectButton() {
+  // const navigate = useNavigate()
+  // const goToAboutPage = () => {
+  //   navigate('/about')
+  // }
+  const {
+    websiteTextColor
+  } = React.useContext(WebsiteContext)!
+
+  return (
+    <Box>
+      <Button
+        variant="text"
+        sx={{
+          textTransform: 'none',
+          color: websiteTextColor
+        }}
+        // onClick={goToAboutPage}
+      >
+        projects
+      </Button>
+    </Box>
+  );
+}
+
+export default ProjectButton
