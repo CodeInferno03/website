@@ -28,6 +28,20 @@ it('\'about\' page renders text', async () => {
   expect(textElement).toBeVisible()
 })
 
+it('\'about\' button not visible on about page', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/about']}>
+        <Routes>
+          <Route path='/about' element={<AboutPage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const aboutButton = await screen.queryAllByText('about')
+  expect(aboutButton.length).toBe(0)
+})
+
 it('\'projects\' button visible on about page', async () => {
   render(
     <WebsiteContextProvider>
@@ -39,5 +53,19 @@ it('\'projects\' button visible on about page', async () => {
     </WebsiteContextProvider>
   )
   const aboutButton = await screen.findByText('projects')
+  expect(aboutButton).toBeVisible()
+})
+
+it('\'home\' button visible on about page', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/about']}>
+        <Routes>
+          <Route path='/about' element={<AboutPage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const aboutButton = await screen.findByText('home')
   expect(aboutButton).toBeVisible()
 })

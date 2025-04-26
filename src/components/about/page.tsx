@@ -2,6 +2,7 @@ import * as React from 'react'
 import Box from '@mui/material/Box'
 import { WebsiteContext } from '../../utils/context'
 import ProjectButton from '../home/projects'
+import HomeButton from './home'
 
 function AboutPage() {
   const {
@@ -18,6 +19,7 @@ function AboutPage() {
       >
         About me
       </Box>
+      <HomeButton />
       <ProjectButton />
     </React.Fragment>
   )

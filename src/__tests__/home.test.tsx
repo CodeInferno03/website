@@ -55,3 +55,17 @@ it('\'projects\' button visible on home screen', async () => {
   expect(aboutButton).toBeVisible()
 })
 
+it('\'home\' button not visible on home page', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/']}>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const homeButton = await screen.queryAllByText('home')
+  expect(homeButton.length).toBe(0)
+})
+
