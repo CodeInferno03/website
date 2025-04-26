@@ -6,6 +6,7 @@ import {
 import HomePage from './components/home/page'
 import WebsiteContextProvider from './utils/contextProvider';
 import AboutPage from './components/about/page';
+import ProjectsPage from './components/projects/page';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
+          <Route path='/projects' element={<ProjectsPage />} />
         </Routes>
       </BrowserRouter>
     </WebsiteContextProvider>

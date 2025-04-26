@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { WebsiteContext } from '../../utils/context';
 
 function ProjectButton() {
-  // const navigate = useNavigate()
-  // const goToAboutPage = () => {
-  //   navigate('/about')
-  // }
+  const navigate = useNavigate()
+  const toToProjectsPage = () => {
+    navigate('/projects')
+  }
   const {
     websiteTextColor
   } = React.useContext(WebsiteContext)!
@@ -21,7 +21,7 @@ function ProjectButton() {
           textTransform: 'none',
           color: websiteTextColor
         }}
-        // onClick={goToAboutPage}
+        onClick={toToProjectsPage}
       >
         projects
       </Button>

@@ -2,11 +2,11 @@ import {
   expect,
   it
 } from 'vitest'
-import App from '../../App'
+import App from '../App'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import HomePage from '../../components/home/page'
-import WebsiteContextProvider from '../../utils/contextProvider'
+import HomePage from '../components/home/page'
+import WebsiteContextProvider from '../utils/contextProvider'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 
 it('Renders', async () => {
