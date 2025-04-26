@@ -3,16 +3,19 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
+import React from 'react'
+import HomePage from './components/homepage/homepage'
+
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <>
-      Personal Website
-    </>
+    <React.Fragment>
+      <HomePage />
+    </React.Fragment>
   )
 }
 
-// SAMPLE COMMENT
+
 
 export default App
