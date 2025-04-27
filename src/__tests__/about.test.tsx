@@ -83,3 +83,17 @@ it('\'education\' button visible on about page', async () => {
   const educationButton = await screen.findByText('education')
   expect(educationButton).toBeVisible()
 })
+
+it('\'experience\' button visible on about page', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/about']}>
+        <Routes>
+          <Route path='/about' element={<AboutPage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const experienceButton = await screen.findByText('experience')
+  expect(experienceButton).toBeVisible()
+})

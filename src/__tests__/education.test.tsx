@@ -82,3 +82,17 @@ it('\'education\' button not visible on education page', async () => {
   const educationButton = await screen.queryAllByText('education')
   expect(educationButton.length).toBe(0)
 })
+
+it('\'experience\' button visible on education page', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/education']}>
+        <Routes>
+          <Route path='/education' element={<EducationPage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const experienceButton = await screen.findByText('experience')
+  expect(experienceButton).toBeVisible()
+})

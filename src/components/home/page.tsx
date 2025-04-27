@@ -4,6 +4,7 @@ import AboutButton from './about'
 import { WebsiteContext } from '../../utils/context'
 import ProjectButton from './projects'
 import EducationButton from './education'
+import ExperienceButton from './experience'
 
 function HomePage() {
   const {
@@ -23,6 +24,7 @@ function HomePage() {
       <AboutButton />
       <ProjectButton />
       <EducationButton />
+      <ExperienceButton />
     </React.Fragment>
   )
 }

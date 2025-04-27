@@ -82,3 +82,17 @@ it('\'education\' button visible on home screen', async () => {
   const educationButton = await screen.findByText('education')
   expect(educationButton).toBeVisible()
 })
+
+it('\'experience\' button visible on home screen', async () => {
+  render(
+    <WebsiteContextProvider>
+      <MemoryRouter initialEntries={['/']}>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+        </Routes>
+      </MemoryRouter>
+    </WebsiteContextProvider>
+  )
+  const experienceButton = await screen.findByText('experience')
+  expect(experienceButton).toBeVisible()
+})

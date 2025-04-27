@@ -5,36 +5,34 @@ import {
 import App from '../App'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-// import HomePage from '../../components/home/page'
 import WebsiteContextProvider from '../utils/contextProvider'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
-import ProjectsPage from '../components/projects/page'
-// import AboutPage from '../components/about/page'
+import ExperiencePage from '../components/experience/page'
 
 it('Renders', async () => {
   render(<App />)
 })
 
-it('\'projects\' page renders text', async () => {
+it('Name text is present', async () => {
   render(
     <WebsiteContextProvider>
-      <MemoryRouter initialEntries={['/about']}>
+      <MemoryRouter initialEntries={['/experience']}>
         <Routes>
-          <Route path='/about' element={<ProjectsPage />} />
+          <Route path='/experience' element={<ExperiencePage />} />
         </Routes>
       </MemoryRouter>
     </WebsiteContextProvider>
   )
-  const textElement = await screen.findByText('My projects')
+  const textElement = await screen.findByText('My experience')
   expect(textElement).toBeVisible()
 })
 
-it('\'about\' button visible on projects page', async () => {
+it('\'about\' button visible on experience page', async () => {
   render(
     <WebsiteContextProvider>
-      <MemoryRouter initialEntries={['/projects']}>
+      <MemoryRouter initialEntries={['/experience']}>
         <Routes>
-          <Route path='/projects' element={<ProjectsPage />} />
+          <Route path='/experience' element={<ExperiencePage />} />
         </Routes>
       </MemoryRouter>
     </WebsiteContextProvider>
@@ -43,26 +41,26 @@ it('\'about\' button visible on projects page', async () => {
   expect(aboutButton).toBeVisible()
 })
 
-it('\'project\' button not visible on projects page', async () => {
+it('\'projects\' button visible on experience page', async () => {
   render(
     <WebsiteContextProvider>
-      <MemoryRouter initialEntries={['/projects']}>
+      <MemoryRouter initialEntries={['/experience']}>
         <Routes>
-          <Route path='/projects' element={<ProjectsPage />} />
+          <Route path='/experience' element={<ExperiencePage />} />
         </Routes>
       </MemoryRouter>
     </WebsiteContextProvider>
   )
-  const projectButton = await screen.queryAllByText('projects')
-  expect(projectButton.length).toBe(0)
+  const aboutButton = await screen.findByText('projects')
+  expect(aboutButton).toBeVisible()
 })
 
-it('\'home\' button visible on projects page', async () => {
+it('\'home\' button visible on experience page', async () => {
   render(
     <WebsiteContextProvider>
-      <MemoryRouter initialEntries={['/projects']}>
+      <MemoryRouter initialEntries={['/experience']}>
         <Routes>
-          <Route path='/projects' element={<ProjectsPage />} />
+          <Route path='/experience' element={<ExperiencePage />} />
         </Routes>
       </MemoryRouter>
     </WebsiteContextProvider>
@@ -71,12 +69,12 @@ it('\'home\' button visible on projects page', async () => {
   expect(homeButton).toBeVisible()
 })
 
-it('\'home\' button visible on projects page', async () => {
+it('\'education\' button visible on experience page', async () => {
   render(
     <WebsiteContextProvider>
-      <MemoryRouter initialEntries={['/projects']}>
+      <MemoryRouter initialEntries={['/experience']}>
         <Routes>
-          <Route path='/projects' element={<ProjectsPage />} />
+          <Route path='/experience' element={<ExperiencePage />} />
         </Routes>
       </MemoryRouter>
     </WebsiteContextProvider>
@@ -85,16 +83,16 @@ it('\'home\' button visible on projects page', async () => {
   expect(educationButton).toBeVisible()
 })
 
-it('\'experience\' button visible on projects page', async () => {
+it('\'experience\' button not visible on experience page', async () => {
   render(
     <WebsiteContextProvider>
-      <MemoryRouter initialEntries={['/projects']}>
+      <MemoryRouter initialEntries={['/experience']}>
         <Routes>
-          <Route path='/projects' element={<ProjectsPage />} />
+          <Route path='/experience' element={<ExperiencePage />} />
         </Routes>
       </MemoryRouter>
     </WebsiteContextProvider>
   )
-  const experienceButton = await screen.findByText('experience')
-  expect(experienceButton).toBeVisible()
+  const experienceButton = await screen.queryAllByText('experience')
+  expect(experienceButton.length).toBe(0)
 })
