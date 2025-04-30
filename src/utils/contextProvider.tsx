@@ -6,10 +6,12 @@ export default function WebsiteContextProvider(
   { children }: { children: React.ReactNode }
 ) {
   const websiteTextColor = '#000000'
+  const buttonFontSize = '25px'
   return (
     <WebsiteContext.Provider
       value={{
-        websiteTextColor
+        websiteTextColor,
+        buttonFontSize
       }}
     >
       {children}

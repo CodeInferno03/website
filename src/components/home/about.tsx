@@ -10,7 +10,8 @@ function AboutButton() {
     navigate('/about')
   }
   const {
-    websiteTextColor
+    websiteTextColor,
+    buttonFontSize
   } = React.useContext(WebsiteContext)!
 
   return (
@@ -18,8 +19,10 @@ function AboutButton() {
       <Button
         variant="text"
         sx={{
-          textTransform: 'none',
-          color: websiteTextColor
+          // textTransform: 'none',
+          color: websiteTextColor,
+          fontSize: buttonFontSize,
+          // width: '25%'
         }}
         onClick={goToAboutPage}
       >

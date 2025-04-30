@@ -10,7 +10,8 @@ function EducationButton() {
     navigate('/education')
   }
   const {
-    websiteTextColor
+    websiteTextColor,
+    buttonFontSize
   } = React.useContext(WebsiteContext)!
 
   return (
@@ -18,8 +19,9 @@ function EducationButton() {
       <Button
         variant="text"
         sx={{
-          textTransform: 'none',
-          color: websiteTextColor
+          color: websiteTextColor,
+          fontSize: buttonFontSize,
+          // width: '25%'
         }}
         onClick={goToAboutPage}
       >

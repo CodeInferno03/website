@@ -10,7 +10,8 @@ function ProjectButton() {
     navigate('/projects')
   }
   const {
-    websiteTextColor
+    websiteTextColor,
+    buttonFontSize
   } = React.useContext(WebsiteContext)!
 
   return (
@@ -18,8 +19,10 @@ function ProjectButton() {
       <Button
         variant="text"
         sx={{
-          textTransform: 'none',
-          color: websiteTextColor
+          // textTransform: 'none',
+          color: websiteTextColor,
+          fontSize: buttonFontSize,
+          // width: '25%'
         }}
         onClick={toToProjectsPage}
       >

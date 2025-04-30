@@ -15,16 +15,38 @@ function HomePage() {
     <React.Fragment>
       <Box
         component='div'
+        position='absolute'
         sx={{
-          color: websiteTextColor
+          color: websiteTextColor,
+          bgcolor: 'blue',
+          width: '40%',
+          left: 0,
+          top: 0,
+          fontSize: '80px',
+          whiteSpace: 'pre-line',
+          paddingTop: '1%'
         }}
       >
-        Hi, I'm Ishaan
+        {'Hi,\nI\'m Ishaan'}
       </Box>
-      <AboutButton />
-      <ProjectButton />
-      <EducationButton />
-      <ExperienceButton />
+      <Box
+        component='div'
+        display='flex'
+        position='absolute'
+        sx={{
+          justifyContent: 'space-between',
+          bgcolor: 'red',
+          width: '60%',
+          right: 0,
+          top: 0,
+          paddingTop: '2%'
+        }}
+      >
+        <AboutButton />
+        <ProjectButton />
+        <EducationButton />
+        <ExperienceButton />
+      </Box>
     </React.Fragment>
   )
 }
