@@ -22,6 +22,7 @@ function ProjectButton() {
           // textTransform: 'none',
           color: websiteTextColor,
           fontSize: buttonFontSize,
+          fontFamily: 'Oxanium, Arial, monospace'
           // width: '25%'
         }}
         onClick={toToProjectsPage}

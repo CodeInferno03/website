@@ -18,9 +18,9 @@ function HomePage() {
         position='absolute'
         sx={{
           color: websiteTextColor,
-          bgcolor: 'blue',
+          // bgcolor: 'blue',
           width: '40%',
-          left: 0,
+          left: 10,
           top: 0,
           fontSize: '80px',
           whiteSpace: 'pre-line',
@@ -35,7 +35,7 @@ function HomePage() {
         position='absolute'
         sx={{
           justifyContent: 'space-between',
-          bgcolor: 'red',
+          // bgcolor: 'red',
           width: '60%',
           right: 0,
           top: 0,

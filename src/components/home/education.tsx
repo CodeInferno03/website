@@ -21,6 +21,7 @@ function EducationButton() {
         sx={{
           color: websiteTextColor,
           fontSize: buttonFontSize,
+          fontFamily: 'Oxanium, Arial, monospace'
           // width: '25%'
         }}
         onClick={goToAboutPage}

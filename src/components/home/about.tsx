@@ -3,6 +3,7 @@ import Button from '@mui/material/Button'
 import Box from '@mui/material/Box';
 import { useNavigate } from 'react-router-dom';
 import { WebsiteContext } from '../../utils/context';
+// import '../../App.css'
 
 function AboutButton() {
   const navigate = useNavigate()
@@ -22,6 +23,7 @@ function AboutButton() {
           // textTransform: 'none',
           color: websiteTextColor,
           fontSize: buttonFontSize,
+          fontFamily: 'Oxanium, Arial, monospace'
           // width: '25%'
         }}
         onClick={goToAboutPage}

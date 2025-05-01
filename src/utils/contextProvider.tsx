@@ -5,8 +5,8 @@ import { WebsiteContext } from './context'
 export default function WebsiteContextProvider(
   { children }: { children: React.ReactNode }
 ) {
-  const websiteTextColor = '#000000'
-  const buttonFontSize = '25px'
+  const websiteTextColor = '#D3D3D3'
+  const buttonFontSize = '30px'
   return (
     <WebsiteContext.Provider
       value={{

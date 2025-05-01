@@ -9,6 +9,7 @@ import AboutPage from './components/about/page';
 import ProjectsPage from './components/projects/page';
 import EducationPage from './components/education/page';
 import ExperiencePage from './components/experience/page';
+import './App.css'
 
 function App() {
 
