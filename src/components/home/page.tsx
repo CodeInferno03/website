@@ -24,7 +24,8 @@ function HomePage() {
           top: 0,
           fontSize: '80px',
           whiteSpace: 'pre-line',
-          paddingTop: '1%'
+          paddingTop: '2%',
+          paddingLeft: '2%'
         }}
       >
         {'Hi,\nI\'m Ishaan'}
@@ -39,7 +40,8 @@ function HomePage() {
           width: '60%',
           right: 0,
           top: 0,
-          paddingTop: '2%'
+          paddingTop: '2%',
+          paddingRight: '2%'
         }}
       >
         <AboutButton />
