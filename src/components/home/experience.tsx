@@ -11,7 +11,8 @@ function ExperienceButton() {
   }
   const {
     websiteTextColor,
-    buttonFontSize
+    buttonFontSize,
+    websiteFont
   } = React.useContext(WebsiteContext)!
 
   return (
@@ -22,7 +23,7 @@ function ExperienceButton() {
           // textTransform: 'none',
           color: websiteTextColor,
           fontSize: buttonFontSize,
-          fontFamily: 'Oxanium, Arial, monospace'
+          fontFamily: websiteFont
           // width: '25%'
         }}
         onClick={goToAboutPage}

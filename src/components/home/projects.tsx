@@ -11,7 +11,8 @@ function ProjectButton() {
   }
   const {
     websiteTextColor,
-    buttonFontSize
+    buttonFontSize,
+    websiteFont
   } = React.useContext(WebsiteContext)!
 
   return (
@@ -22,7 +23,7 @@ function ProjectButton() {
           // textTransform: 'none',
           color: websiteTextColor,
           fontSize: buttonFontSize,
-          fontFamily: 'Oxanium, Arial, monospace'
+          fontFamily: websiteFont
           // width: '25%'
         }}
         onClick={toToProjectsPage}

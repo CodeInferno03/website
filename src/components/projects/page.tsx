@@ -21,10 +21,18 @@ function ProjectsPage() {
       >
         My projects
       </Box>
-      <HomeButton />
-      <AboutButton />
-      <EducationButton />
-      <ExperienceButton />
+      <Box
+        component='div'
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-evenly',
+        }}
+      >
+        <HomeButton />
+        <AboutButton />
+        <EducationButton />
+        <ExperienceButton />
+      </Box>
     </React.Fragment>
   )
 }

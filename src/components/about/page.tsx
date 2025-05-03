@@ -21,10 +21,18 @@ function AboutPage() {
       >
         About me
       </Box>
-      <HomeButton />
-      <ProjectButton />
-      <EducationButton />
-      <ExperienceButton />
+      <Box
+        component='div'
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-evenly',
+        }}
+      >
+        <HomeButton />
+        <ProjectButton />
+        <EducationButton />
+        <ExperienceButton />
+      </Box>
     </React.Fragment>
   )
 }

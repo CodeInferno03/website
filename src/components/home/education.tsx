@@ -11,7 +11,8 @@ function EducationButton() {
   }
   const {
     websiteTextColor,
-    buttonFontSize
+    buttonFontSize,
+    websiteFont
   } = React.useContext(WebsiteContext)!
 
   return (
@@ -21,7 +22,7 @@ function EducationButton() {
         sx={{
           color: websiteTextColor,
           fontSize: buttonFontSize,
-          fontFamily: 'Oxanium, Arial, monospace'
+          fontFamily: websiteFont
           // width: '25%'
         }}
         onClick={goToAboutPage}

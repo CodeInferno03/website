@@ -21,10 +21,18 @@ function ExperiencePage() {
       >
         My experience
       </Box>
-      <HomeButton />
-      <AboutButton />
-      <ProjectButton />
-      <EducationButton />
+      <Box
+        component='div'
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-evenly',
+        }}
+      >
+        <HomeButton />
+        <AboutButton />
+        <ProjectButton />
+        <EducationButton />
+      </Box>
     </React.Fragment>
   )
 }

@@ -22,10 +22,18 @@ function EducationPage() {
       >
         My education
       </Box>
-      <HomeButton />
-      <AboutButton />
-      <ProjectButton />
-      <ExperienceButton />
+      <Box
+        component='div'
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-evenly',
+        }}
+      >
+        <HomeButton />
+        <AboutButton />
+        <ProjectButton />
+        <ExperienceButton />
+      </Box>
     </React.Fragment>
   )
 }

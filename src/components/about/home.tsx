@@ -11,7 +11,8 @@ function HomeButton() {
   }
   const {
     websiteTextColor,
-    buttonFontSize
+    buttonFontSize,
+    websiteFont
   } = React.useContext(WebsiteContext)!
 
   return (
@@ -22,7 +23,7 @@ function HomeButton() {
           // textTransform: 'none',
           color: websiteTextColor,
           fontSize: buttonFontSize,
-          fontFamily: 'Oxanium, Arial, monospace'
+          fontFamily: websiteFont
         }}
         onClick={goToAboutPage}
       >

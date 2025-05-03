@@ -12,7 +12,8 @@ function AboutButton() {
   }
   const {
     websiteTextColor,
-    buttonFontSize
+    buttonFontSize,
+    websiteFont
   } = React.useContext(WebsiteContext)!
 
   return (
@@ -23,7 +24,7 @@ function AboutButton() {
           // textTransform: 'none',
           color: websiteTextColor,
           fontSize: buttonFontSize,
-          fontFamily: 'Oxanium, Arial, monospace'
+          fontFamily: websiteFont
           // width: '25%'
         }}
         onClick={goToAboutPage}
